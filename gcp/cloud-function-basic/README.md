@@ -14,3 +14,6 @@ curl -O https://raw.githubusercontent.com/GoogleCloudPlatform/python-docs-sample
 ```
 gcloud functions deploy hello_gcs_generic --runtime python37 --trigger-resource YOUR_INPUT_BUCKET_NAME --trigger-event google.storage.object.finalize
 ```
+4. Test the function by uploading an item to *YOUR_INPUT_BUCKETNAME*
+
+5. Examine the cloud function logging to view the results.

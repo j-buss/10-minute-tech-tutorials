@@ -13,7 +13,7 @@ if __name__ == "__main__":
     logreg = LogisticRegression()
     logreg.fit(X_train, y_train)
     y_pred = logreg.predict(X_test)
-    score = logreg.accuracy_score(y_test, y_pred)
+    score = accuracy_score(y_test, y_pred)
     print("Score: %s" % score)
     mlflow.log_metric("score", score)
     mlflow.sklearn.log_model(logreg, "model")

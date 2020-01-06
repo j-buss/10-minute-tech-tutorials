@@ -18,15 +18,19 @@ def index():
           `bigquery-public-data.census_utility.fips_codes_all`
         """
     )
-    return 'Hello Flask app'
+    # Handle query_job result and return to flask to display
+    res = query_job.result()
+    for row in res:
+        output = "Record Count: " + str(row[0])
+    return output
 
 app = dash.Dash(
     __name__,
     server=server,
     routes_pathname_prefix='/dash/'
 )
-
 app.layout = html.Div("My Dash app")
 
+
 if __name__ == '__main__':
-    app.run_server(debug=True)  
+    app.run_server(debug=True)

@@ -4,17 +4,17 @@ import dash_html_components as html
 
 server = flask.Flask(__name__)
 
-@server.route('/')
-def index():
-    return 'Hello Flask app'
+# @server.route('/')
+# def index():
+#     return 'Hello Flask app'
 
 app = dash.Dash(
     __name__,
     server=server,
-    routes_pathname_prefix='/dash/'
+    routes_pathname_prefix='/'
 )
 
 app.layout = html.Div("My Dash app")
 
 if __name__ == '__main__':
-    app.run_server(debug=True)  
+    app.run_server(port=8080)

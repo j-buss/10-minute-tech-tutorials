@@ -4,4 +4,4 @@ WORKDIR /app
 RUN pip install -r requirements.txt
 
 # Deploy to GAE
-CMD exec gunicorn -b :$PORT main:server --timeout 1800
+CMD ["gunicorn", "-b","0.0.0.0:8080", "main:server", "--timeout", "1800"]

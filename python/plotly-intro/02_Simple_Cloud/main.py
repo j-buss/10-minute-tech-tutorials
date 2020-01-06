@@ -4,10 +4,6 @@ import dash_html_components as html
 
 server = flask.Flask(__name__)
 
-# @server.route('/')
-# def index():
-#     return 'Hello Flask app'
-
 app = dash.Dash(
     __name__,
     server=server,

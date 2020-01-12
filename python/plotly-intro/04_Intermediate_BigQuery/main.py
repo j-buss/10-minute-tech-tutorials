@@ -190,7 +190,7 @@ def update_figure(value):
         'layout': dict(
             xaxis={'type': 'log', 'title': 'Population',
                    'range': [2.5, 8]},
-            yaxis={'title': 'Income per Capita', 'range': [10000, 70000]},
+            yaxis={'title': 'Income per Capita', 'range': [10000, 72000]},
             margin={'l': 40, 'b': 40, 't': 10, 'r': 10},
             legend={'x': 0, 'y': 1},
             hovermode='closest',

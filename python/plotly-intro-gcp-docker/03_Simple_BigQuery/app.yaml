@@ -1,4 +1,0 @@
-service: 03-simple-bigquery
-runtime: custom
-env: flex
-entrypoint: gunicorn -b :$PORT main:server

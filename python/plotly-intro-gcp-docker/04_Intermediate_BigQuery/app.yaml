@@ -1,0 +1,4 @@
+service: 04-intermediate-bigquery
+runtime: custom
+env: flex
+entrypoint: gunicorn -b :$PORT main:server

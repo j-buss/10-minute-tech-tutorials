@@ -1,0 +1,5 @@
+service: 02-simple-cloud
+runtime: custom
+env: flex
+entrypoint: gunicorn -b :$PORT main:server
+

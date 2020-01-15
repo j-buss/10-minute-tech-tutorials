@@ -1,3 +1,0 @@
-service: 02-simple-cloud
-runtime: python37
-entrypoint: gunicorn -b :$PORT main:app

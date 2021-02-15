@@ -1,7 +1,5 @@
 import requests
-res = requests.get('https://www.roguefitness.com/stainless-steel-ohio-bar')
-res.status_code()
-playFile = open('stainlessOhio.txt','wb')
-for chunk in res.iter_content(100000):
-    playFile.write(chunk)
-playFile.close()
+url = 'https://www.roguefitness.com/stainless-steel-ohio-bar'
+headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
+result = requests.get(url, headers=headers)
+print(result.content.decode())
